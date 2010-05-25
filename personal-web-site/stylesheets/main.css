@@ -1,0 +1,80 @@
+a {
+	color: white;
+	text-decoration: underline;	
+}
+
+#title {
+
+}
+
+a:hover {
+	color:  black;
+	background: white;
+}
+
+#header {
+	color: #fffeff;
+	font-size: 72px;
+	margin: 25px;
+	border-bottom: 2px ridge #eaeaea;
+	text-shadow: #fffeff 0 0 0px;
+}
+
+#about {
+	background-color: #d5d5d5;
+	padding: 15px;
+	-webkit-border-radius: 10px;
+	color: #000;
+}
+
+#nav {
+	background-color: #d5d5d5;
+	font-size: 24px;
+	-webkit-border-radius: 10px;
+}
+
+#nav li {
+	list-style-image: url(http://www.famfamfam.com/lab/icons/silk/icons/accept.png);
+	list-style-position: outside;
+	opacity: 1;
+}
+
+#left-content {
+	float: left;
+	width: 250px;
+	margin-right: 20px;
+}
+
+#body {
+	width: 600px;
+	float: left;
+	clear: none;
+}
+
+#footer {
+	text-align: center;
+	text-transform: none;
+	font-size: small;
+	text-decoration: underline;
+	float: none;
+	clear: both;
+	margin: 50px;
+	padding-top: 50px;
+}
+
+#content {
+	text-align: left;
+	width: 970px;
+	border-style: solid;
+	border-color: #f00;
+	margin: auto;
+	padding: 20px;
+}
+
+html, body {
+	background-color: #000;
+	color: #fffeff;
+	margin: 25px;
+	width: 100%;
+	height: 100%;
+}
