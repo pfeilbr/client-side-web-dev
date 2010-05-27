@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>index</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Brian Pfeil">
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/ui-lightness/jquery-ui.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+	jQuery(function($) {
+		
+		function l(s) {
+			$("<div class='log-item'>" + s + "</div>").appendTo('#log');
+		}
+		
+		function orientationName(angle) {
+			return Math.abs(angle) == 90 ? "landscape" : "portrait";
+		}
+		
+		var p = $('#section1').position();
+		l( "p.left = " + p.left + ", p.top = " + p.top);
+		
+		$('body').get(0).onorientationchange = function() {
+			l('onorientationchange called. window.orientation = ' + window.orientation +
+				", orientationName = " + orientationName(window.orientation) );
+		};
+	});	
+	</script>
+	<style type="text/css" media="screen">
+	
+	html, body {
+		margin: 0;
+	}
+	
+	#content {
+		margin-left: 10px;
+		margin-right: 10px;
+/*		font-size: 12pt;*/
+	}
+	
+	#section1 {
+		background: ;
+		background-color: grey;
+	}
+	
+	#section2 {
+		width: 300px;
+		background-color: grey;
+	}
+	
+	#log {
+		color: white;
+		background-color: black;
+	}
+
+	</style>
+	
+</head>
+	<body>
+		<div id='content'>
+
+			<div id="section1">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>				
+			</div>
+			
+			<div id="section2">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>				
+			</div>
+			
+			<div id="log">
+			</div>
+				
+		</div>
+	</body>
+</html>
